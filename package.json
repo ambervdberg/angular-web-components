@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "build:angular-elements": "cd angular-elements && npm run build && npm run link",
-    "build:vite-lit": "cd vite-lit && npm link angular-elements && npm run build",
+    "build:vite-lit": "cd vite-lit && npm run link && npm run build",
     "build": "npm run build:angular-elements && npm run build:vite-lit",
-    "start": "cd vite-lit && npm run dev"
+    "preinstall": "cd angular-elements && npm install && cd ../vite-lit && npm install",
+    "start": "npm run build && cd vite-lit && npm run dev -- --open"
   }
 }
