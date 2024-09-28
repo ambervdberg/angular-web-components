@@ -1,0 +1,12 @@
+{
+  "name": "angular-web-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:angular-elements": "cd angular-elements && npm run build && npm run link",
+    "build:vite-lit": "cd vite-lit && npm link angular-elements && npm run build",
+    "build": "npm run build:angular-elements && npm run build:vite-lit",
+    "start": "cd vite-lit && npm run dev"
+  }
+}
