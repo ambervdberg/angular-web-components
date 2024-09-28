@@ -9,7 +9,16 @@ Result:
 ## How to run
 
 - `npm install`
-- `npm run start`
-- Opens automatically on [http://localhost:5173](http://localhost:5173)
 
+### Lit Project
+
+Simple Lit Element project with a Angular element.
+
+- `npm run start:lit`
+
+### Extra: Vanilla Project
+
+This is just a simple vanilla project (no framework) with a Angular element.
+
+- `npm run start:vanilla`
 

@@ -5,9 +5,11 @@
   "type": "module",
   "scripts": {
     "build:angular-elements": "cd angular-elements && npm run build && npm run link",
-    "build:vite-lit": "cd vite-lit && npm run link && npm run build",
-    "build": "npm run build:angular-elements && npm run build:vite-lit",
-    "preinstall": "cd angular-elements && npm install && cd ../vite-lit && npm install",
-    "start": "npm run build && cd vite-lit && npm run dev -- --open"
+    "build:vite-lit": "cd vite-lit && npm link angular-elements && npm run build",
+    "build:vanilla": "cd vite-vanilla && npm link angular-elements && npm run build",
+    "build": "npm run build:angular-elements && npm run build:vite-lit && npm run build:vanilla",
+    "preinstall": "cd angular-elements && npm install && cd ../vite-lit && npm install && cd ../vite-vanilla && npm install && cd .. && npm run build",
+    "start:lit": "cd vite-lit && npm run dev -- --open",
+    "start:vanilla": "cd vite-vanilla && npm run dev -- --open"
   }
 }
